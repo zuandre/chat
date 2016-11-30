@@ -295,7 +295,7 @@ angular.module('app.services', [])
 	sqlObj.loadChats = function(my) {
 			
 		//Bad implementation 	
-        var query = "SELECT * FROM chats where distinct from_id not like ? ";
+        var query = "SELECT * FROM  chats where distinct from_id not like ? ";
         $cordovaSQLite.execute($rootScope.db, query,[my]).then(function(res) {
             if(res.rows.length > 0) {
 				for (var i=0 ; i<res.rows.length; i=i+1) {
